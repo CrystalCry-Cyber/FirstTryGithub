@@ -124,13 +124,3 @@ Aplikasi telah dilengkapi dengan konfigurasi `vercel.json` dan `netlify.toml` se
 3. Build command: `npm run build`, Publish directory: `dist`.
 4. Klik **Deploy site**.
 
----
-
-## 5. Kepatuhan Aturan Standar Desain & Aksesibilitas (antislop)
-- **R-02 (Copywriting)**: Tidak menggunakan karakter em dash (`—`) pada seluruh antarmuka dan teks.
-- **R-03 (Responsiveness)**: Tata letak reflow sempurna dari perangkat mobile hingga desktop lebar. Target sentuh tombol minimal 44px.
-- **R-24 & R-26 (Navigasi & Interaksi)**: Seluruh tombol dan tautan navigasi berfungsi nyata. Tidak ada dead control atau tautan fiktif.
-- **R-25 (Kontras Warna)**: Memenuhi standar WCAG AA dengan rasio kontras teks minimal 4.5:1.
-- **R-27 (UI States)**: Setiap tampilan data memiliki Empty state, Loading state, dan Error state yang informatif.
-- **R-32 & R-39 (Aksesibilitas)**: Navigasi penuh melalui keyboard (Tab, Enter, Space, Escape) dengan indikator fokus kontras tinggi.
-
