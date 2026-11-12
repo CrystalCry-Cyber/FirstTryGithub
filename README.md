@@ -6,22 +6,7 @@ Dibangun untuk memenuhi persyaratan tugas **Coding Talent Challenge** (Praktikum
 
 ---
 
-## 1. Data Mahasiswa & Pengumpulan (Bagian G)
-
-| Informasi | Keterangan |
-| :--- | :--- |
-| **Nama Lengkap** | [Nama Mahasiswa Anda] |
-| **NIM** | [NIM Mahasiswa Anda] |
-| **URL Aplikasi Hosting** | `https://[nama-proyek-anda].vercel.app` (atau Netlify) |
-| **URL Repository GitHub** | `https://github.com/[username-anda]/sim-lab-inventory` |
-| **Akun Demo Admin** | Username: `admin` \| Password: `admin123` |
-| **Akun Demo Staff** | Username: `staff` \| Password: `staff123` |
-| **Akun Demo Staff 2** | Username: `staff2` \| Password: `staff123` |
-| **Teknologi yang Digunakan** | React 18, TypeScript, Vite, Supabase (PostgreSQL Cloud), Web Storage API Fallback |
-
----
-
-## 2. Integrasi Database Supabase (Cloud Database)
+## 1. Integrasi Database Supabase (Cloud Database)
 
 Aplikasi telah terhubung penuh dengan **Supabase** (PostgreSQL). Seluruh skema tabel, relasi, dan data awal telah disiapkan pada file [`supabase/schema.sql`](supabase/schema.sql).
 
