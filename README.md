@@ -85,9 +85,6 @@ Data awal yang telah tersedia dan tersimpan di sistem:
 - Kuantitas yang dipinjam secara otomatis mengurangi stok barang yang tersedia dan menambah total barang dipinjam.
 - Pengembalian barang memulihkan kuantitas ke stok tersedia dan menandai transaksi berstatus Selesai beserta tanggal pengembalian.
 
-### E. Tombol Pengujian Cepat (Quick Demo Switcher)
-- Pada halaman login, tersedia tombol akses instan untuk Admin dan Staff sehingga dosen atau penguji dapat langsung melakukan uji coba peran tanpa mengetik manual.
-
 ---
 
 ## 3. Menjalankan Aplikasi Secara Lokal

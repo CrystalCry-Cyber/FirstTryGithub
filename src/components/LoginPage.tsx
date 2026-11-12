@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { BoxIcon } from './Icons';
-import { getEnvAuthConfig } from '../config/authConfig';
 
 export const LoginPage: React.FC = () => {
   const { login } = useAuth();
@@ -9,8 +8,6 @@ export const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [errorNotice, setErrorNotice] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const envConfig = getEnvAuthConfig();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,18 +22,6 @@ export const LoginPage: React.FC = () => {
     const res = await login(username, password);
     setIsSubmitting(false);
 
-    if (!res.success) {
-      setErrorNotice(res.message || 'Gagal masuk ke sistem.');
-    }
-  };
-
-  const handleFillDemo = async (demoUser: string, demoPass: string) => {
-    setUsername(demoUser);
-    setPassword(demoPass);
-    setErrorNotice('');
-    setIsSubmitting(true);
-    const res = await login(demoUser, demoPass);
-    setIsSubmitting(false);
     if (!res.success) {
       setErrorNotice(res.message || 'Gagal masuk ke sistem.');
     }
@@ -64,7 +49,7 @@ export const LoginPage: React.FC = () => {
         <form onSubmit={handleSubmit} className="form-stack">
           <div className="form-group">
             <label htmlFor="login-username" className="form-label">
-              Username Pengguna
+              Username
             </label>
             <input
               id="login-username"
@@ -98,36 +83,7 @@ export const LoginPage: React.FC = () => {
             {isSubmitting ? 'Memeriksa Akses...' : 'Masuk ke Sistem'}
           </button>
         </form>
-
-        <section className="demo-accounts-box" aria-labelledby="demo-accounts-title">
-          <h2 id="demo-accounts-title" className="demo-accounts-title">
-            Akun Demo Pengujian (Dosen / Penguji)
-          </h2>
-          <p className="demo-accounts-desc">
-            Klik tombol di bawah ini untuk langsung masuk tanpa perlu mengetik manual:
-          </p>
-          <div className="demo-btn-group">
-            <button
-              type="button"
-              className="btn-demo btn-demo-admin"
-              onClick={() => handleFillDemo(envConfig.admin.username, envConfig.admin.password)}
-            >
-              <span className="demo-role-badge">ADMIN</span>
-              <span className="demo-creds">{envConfig.admin.username} / {envConfig.admin.password}</span>
-            </button>
-
-            <button
-              type="button"
-              className="btn-demo btn-demo-staff"
-              onClick={() => handleFillDemo(envConfig.staff.username, envConfig.staff.password)}
-            >
-              <span className="demo-role-badge">STAFF</span>
-              <span className="demo-creds">{envConfig.staff.username} / {envConfig.staff.password}</span>
-            </button>
-          </div>
-        </section>
       </main>
     </div>
   );
 };
-
